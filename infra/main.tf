@@ -8,8 +8,8 @@ module "app" {
 }
 
 module "monitoring" {
-  source       = "./modules/monitoring"
-  network_name = module.network.network_name
+  source        = "./modules/monitoring"
+  network_name  = module.network.network_name
   scrape_target = "${module.app.container_name}:8000"
 }
 
